@@ -1,0 +1,114 @@
+<!doctype html>
+<HTML lang=”es”>    
+    <HEAD>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <H2>Actividad. 2.4.1. Formularios.</H2>
+        <meta name="keywords" 
+        content="HTML5, CSS3, Javascript, palabra clave">
+        <TITLE>Formularios242</TITLE>
+    </HEAD>
+        <BODY>
+            <H2> 2.4. Formularios</H2>
+
+             <H3>2.4.2. Atributos de formularios</H3>
+             <H3>2.4.2.1. Atributo Action</H3>
+                 <form action="accion.php" method="post" >
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" value="Luis Miguel"><br>
+                    <label for="ApellidoPaterno">Apellido paterno:</label><br>
+                    <input type="text" id="apellidoPaterno" name="apellidoPaterno"
+                         value="Gallego"><br><br>
+                    <label for="ApellidoMaterno">Apellido materno:</label><br>
+                    <input type="text" id="apellidoMaterno" name="apellidoMaterno"
+                        value=" Basteri "><br><br>
+                    <input type="submit" value="Submit"><BR>
+
+            <H2>2.4.3. Elementos de formularios</H2>
+
+                <H3>2.4.3.1. El elemento < input ></H3>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+
+                <H3>2.4.3.2. El elemento < label ><BR>
+                    2.4.3.3. El elemento < select ><BR></H3>
+                        <label for="auto">Selecciona un auto caro:</label>
+                    <select id="auto" name="auto">
+                        <option value="vocho">Volkswagen</option>
+                        <option value="focus">Focus</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select><BR><BR>
+
+                        <H4>Una opción preseleccionada:</H4>
+                        <label for="auto">Selecciona un auto:</label> 
+                        <select id="auto" name="auto" size="3">
+                            <option value="vocho">Volkswagen</option>
+                            <option value="focus">Focus</option>
+                            <option value="fiat">Fiat</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                        
+
+                        <H4>El usuario seleccione más de un valor:</H4><BR>
+                        <label for="auto">Selecciona un auto:</label>
+                        <select id="auto" name="auto" size="4" multiple>
+                            <option value="vocho">Volkswagen</option>
+                            <option value="focus">Focus</option>
+                            <option value="fiat">Fiat</option>
+                            <option value="audi">Audi</option><BR>
+                        </select>
+                             
+                    <H3> 2.4.3.4. El elemento < textarea > </H3><BR>
+                            <textarea name="message" rows="10" cols="30">
+                                Hay algo importante aquí.
+                            </textarea>
+                            <br> 
+                            
+                            <textarea name="message" style="width:200px; height:300px;">
+                                    The cat was playing in the garden.
+                            </textarea>
+                                    
+                                   
+                    <H3>2.4.3.5. El elemento < button > </H3>
+                        <button type="button" onclick="'alerta(Haz hecho click!)'"> Haz click aquí!</button>
+
+                    <H3>2.4.3.6. Los elementos < fieldset > y < legend ></H3>
+                        <fieldset>
+                            <legend>Datos de la persona:</legend>
+                            <label for="nombre">Nombre:</label><br>
+                            <input type="text" id="nombre" name="nombre" value="Luis Miguel"><br>
+                            <label for="apellidoPaterno">Apellido paterno:</label><br>
+                            <input type="text" id="apellidoPaterno" name="apellidoPaterno"
+                            value="Gallego"><br><br>
+                            <label for="apellidoMaterno">Apellido materno:</label><br>
+                            <input type="text" id="apellidoMaterno" name="apellidoMaterno"
+                            value="Basteri"><br><br>
+                            <input type="submit" value="Submit">
+                        </fieldset>
+
+                    <H3>2.4.3.7. El elemento < datalist ></H3>
+                        <input list="navegadores">
+                        <datalist id="navegadores">
+                            <option value="Internet Explorer">
+                            <option value="Firefox">
+                            <option value="Chrome">
+                            <option value="Opera">
+                            <option value="Safari">
+                        </datalist>
+
+                        <H3>2.4.3.8. El elemento < output ></H3>
+                            <oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                            0
+                            <input type="range" id="a" name="a" value="50">
+                            100 +
+                            <input type="number" id="b" name="b" value="50">
+                            =
+                            <output name="x" for="a b"></output>
+                            <input type="submit">
+
+                </form>
+        </BODY>
+</HTML>

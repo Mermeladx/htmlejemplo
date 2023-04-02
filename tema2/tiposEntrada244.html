@@ -1,0 +1,144 @@
+<!doctype html>
+<HTML lang=”es”>    
+    <HEAD>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <H2>Actividad. 2.4.2. Tipos de entrada.</H2>
+        <meta name="keywords" 
+        content="HTML5, CSS3, Javascript, palabra clave">
+        <TITLE>TiposEntrada244</TITLE>
+    </HEAD>
+        <BODY>
+            <form>
+            <H2>2.4.4 Tipos de entrada</H2>
+                <H3>2.4.4.1. Tipo de entrada de texto</H3>
+                    <label for="nombre"> Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre"><br>
+                    <label for="apellidoPaterno"> Apellido Paterno:</label><br>
+                    <input type="text" id=" apellidoPaterno " name=" apellidoPaterno "><BR>
+                    <label for="apellidoMaterno"> Apellido Materno:</label><br>
+                    <input type="text" id=" apellidoMaterno " name=" apellidoMaterno ">
+
+                <H3>2.4.4.2. Tipo de entrada password</H3>
+                    <label for="usuario">Usuario:</label><br>
+                    <input type="text" id="usuario" name="usuario"><br>
+                    <label for="clave">Clave:</label><br>
+                    <input type="password" id="clave" name="clave"><BR>
+
+                <H3>2.4.4.3. Tipo de entrada Submit</H3>
+                    <input type="submit" value="Enviar">
+
+                <H3>2.4.4.4. Tipo de entrada reset</H3>
+                    <input type="reset" value="Restaurar">
+
+                <H3>2.4.4.5. Tipo de entrada Radio</H3>
+                    <input type="radio" id="html" name="lenguajeFavorito" value="HTML">
+                    <label for="html">HTML</label><br>
+                    <input type="radio" id="css" name=" lenguajeFavorito " value="CSS">
+                    <label for="css">CSS</label><br>
+                    <input type="radio" id="javascript" name=" lenguajeFavorito " value="JavaScript">
+                    <label for="php">PHP</label><br>
+                    <input type="radio" id="php" name=" lenguajeFavorito " value="PHP">
+                    <label for="php">PHP</label>
+
+                <H3>2.4.4.6. Tipo de entrada checkBox</H3>
+                    <input type="checkbox" id="vehiculo1" name="vehiculo1" value="Auto">
+                    <label for=" vehiculo 1"> Tengo auto</label><br>
+                    <input type="checkbox" id="vehiculo2" name=" vehiculo 2" value="Moto">
+                    <label for=" vehiculo 2"> Tengo moto</label><br>
+                    <input type="checkbox" id="vehiculo3" name=" vehiculo 3" value="Yate">
+                    <label for=" vehiculo 3"> Tengo yate</label><br>
+
+
+                <H3>2.4.4.7. Tipo de entrada Button</H3>
+                    <input type="button" onclick="alert('Hola a todos!')" value="Saludos"¡Hazme clic!"><br>
+            
+                <H3>2.4.4.8. Tipo de entrada Color</H3>
+                    <label for="color">Selecciona tu color favorito:</label>
+                    <input type="color" id="color" name="favcolor"><br>
+
+                <H3>2.4.4.9. Tipo de entrada Fecha</H3>
+                    <label for="fechaNacimiento"> Cumpleaños:</label>
+                    <input type="date" id=" fechaNacimiento " name=" fechaNacimiento "><br>
+                
+                <H3>2.4.4.10. Tipo de entrada Datetime-local</H3>
+                    <label for=" fechaNacimientoHora "> Cumpleaños (fecha y hora):</label>
+                    <input type="datetime-local" id=" fechaNacimientoHora " name=" fechaNacimientoHora"><br>
+                
+                <H3>2.4.4.11. Tipo de entrada Email</H3>
+                    <input type="email" id=" correo " name=" correo "><br>
+
+                <H3>2.4.4.12. Tipo de entrada file</H3>
+                    <label for="miArchivo"> Seleccione un archivo:</label><br>
+                    <input type="file" id=" miArchivo " name=" miArchivo "><br>
+
+                <H3>2.4.4.13. Tipo de entrada hidden</H3>
+                    <label for="miArchivo">Define un campo de entrada oculto (no visible para un usuario)</label><br>
+                    <input type="hidden" id="identificadorUsuario" name=" identificadorUsuario" value="8313">
+
+
+                <H3>2.4.4.14. Tipo de entrada month</H3>
+                    <label for="MesAnio"> Cumpleaños (mes y año):</label>
+                    <input type="month" id=" MesAnio " name=" MesAnio "><BR>
+
+                <H3>2.4.4.15. Tipo de entrada number</H3>
+                    <label for=" cantidad "> Cantidad (entre 1 y 10):</label>
+                    <input type="number" id=" cantidad " name=" cantidad " min="1" max="10"><BR>
+
+                <H3>2.4.4.16. Restricciones de entrada</H3>
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" name="cantidad " min="0" max="100" step="10" value="30"><BR>
+                
+                <H3>2.4.4.17. Tipo de entrada range</H3>
+                    <label for="volumen">Volumen (between 0 and 30):</label>
+                    <input type="range" id=" volumen " name=" volumen " min="0" max="30"><BR>
+
+                <H3>2.4.4.18. Tipo de entrada search</H3>
+                    <label for="buscaGoogle"> Buscar en Google:</label>
+                    <input type="search" id="buscaGoogle" name="buscaGoogle"><BR>
+
+                <H3>2.4.4.19. Tipo de entrada tel</H3>
+                    <label for="telefono"> Ingrese su número de teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><BR>
+
+                <H3>3.4.4.20. Tipo de entrada time</H3>
+                    <label for="appt"> Seleccione una hora:</label>
+                    <input type="time" id="hora" name="hora"><br>
+                    
+                <H3>2.4.4.21. Tipo de entrada Url</H3>
+                <label for=" paginaInicio "> Añade tu página de inicio:</label>
+                <input type="url" id="paginaInicio" name=" paginaInicio "><br>
+                
+                <H3>2.4.4.22. Tipo de entrada week</H3>
+                    <label for="semana">Select a week:</label>
+                    <input type="week" id="semana" name="semana"><br>
+
+            <H2>2.4.6. Atributos de form</H2>
+                <H3>2.4.6.1. El atributo form</H3>
+                    <form action="/accion.php" id="formulario">
+                        <input type="text" id="apellidoPaterno" name="apellidoPaterno" form="formulario"><br>
+                    </form>
+                    
+                <H3>2.4.6.2. El atributo formaction</H3>
+                    <input type="submit" formaction="/accion2.php" value="Enviar como administrador"><br>
+
+                <H3>2.4.6.3. El atributo formenctype</H3>
+                    <input type="submit" formenctype="multipart/form-data" value="Enviar como Multipart/form-data"><br>
+
+                <H3>2.4.6.4. El atributo formmethod</H3>
+                    <input type="submit" formmethod="post" value="Enviar usando POST"><br>
+
+                <H3>2.4.6.5. El atributo formtarget</H3>
+                    <input type="submit" formtarget="_blank" value="Enviar a una nueva pestaña"><br>
+
+                <H3>2.4.6.6. El atributo formnovalidate</H3>
+                    <input type="submit" formnovalidate="formnovalidate" value="Enviar sin validación"><br>
+                
+                <H3>2.4.6.7. El atributo novalidate</H3>
+                    <form action="/accion.php" novalidate ></form><br>
+            </form>
+                
+        </BODY>
+</HTML> 

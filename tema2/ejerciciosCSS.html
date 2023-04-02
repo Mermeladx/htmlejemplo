@@ -1,0 +1,198 @@
+<!doctype html>
+<HTML lang=”es”>
+    <HEAD>
+        <style> 
+
+            h3 { color:rgba(59, 142, 180, 0.796); font-size:1em; font-family:Arial; }
+            
+            * { border:1px solid rgba(109, 0, 128, 0.09); }
+
+            #boxout * p {border:1px solid rgba(186, 131, 164, 0.312); }
+            
+            input {font-size:30px;
+        
+            color: rgb(141, 27, 179)}
+            body {font-size:25px;
+                color: #cae0dd;
+                font-family:"times new roman";
+                background:#c123605e; 
+            }
+            .pink {background: #e1aabf83; font-size: 50px}
+            .yellow {background: #e2d0dca2;font-size:25px }
+
+            #bienvenido { font-style:italic; color:rgba(0, 0, 255, 0.275); }
+
+            .bienvenido { font-style:italic; color:rgba(255, 0, 153, 0.464); }
+                       /* Esto es un comentario CSS */
+
+            p b { color:rgba(229, 255, 0, 0.455); }
+
+            ul li b { color:rgba(255, 123, 0, 0.529); }
+
+            ol ol {list-style-type: lower-alpha;}
+
+            ol>li {font-weight: bold;}
+
+            p b { color:rgba(0, 255, 255, 0.51); }
+            
+            p > b { color:rgba(0, 26, 255, 0.201);}
+            
+            #midiv { font-style:italic; }
+            #miid { text-decoration:underline; }
+            span#miid { text-decoration:undrline; }
+            div#miid { text-decoration:underline; }
+
+            .miclase { margin-left:10px; }
+
+
+            </style>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <H2> Actividad 2.6.1. Ejercicios CSS.</H2>
+        <meta name="keywords" 
+        content="HTML5, CSS3, Javascript, palabra clave">
+        <TITLE>EjerciciosCSS</TITLE>
+    </HEAD>
+        <BODY>
+           <H2>2.6. Selectores </H2> 
+           <H3>2.6.1. Introducción a CSS</H3> 
+            <H3>2.6.2. Importar una hoja de estilo</H3> 
+            <style>
+                @import url('/css/styles.css');
+            </style>
+            También puede incluir una hoja de estilo con la etiqueta HTML <link> de la siguiente
+            manera:<br>
+            <code>< link rel='stylesheet' type='text/css' href='styles.css' ><br></code>
+
+           <H3>2.6.3. Identificadores</H3> 
+           <div id=bienvenido>Hola</div>
+
+           <H3>2.6.4. Clases</H3> 
+           <div class='bienvenido'>Hello</div>
+
+           <H3>2.6.5.2. Uso de comentarios</H3> 
+                <code>
+                    /* Esto es un comentario CSS */<br><BR>
+                    /*<br>
+                    Un comentario de varias<br>
+                    líneas<br>
+                    comentario<br>
+                    */<br>
+                 </code>
+
+           <H3>2.6.9. Estilos en línea</H3> 
+                <a href="http://google.com.mx" style="color:rgba(0, 128, 0, 0.544);">Visita Google</a>
+
+           <H3>2.6.10.1. El selector type</H3> 
+                Todo el texto dentro de las etiquetas < p > ... < /p > está totalmente justificado:
+                <CODE>p { text-align:justify; }</CODE>
+
+           <H3>2.6.10.2. El selector descendant</H3> 
+                <p><b>Hola</b></p>
+
+                <ul> <li> <b> Un elemento de lista de una lista desordenada lista:
+                    <ul>
+                        <li>Luis</li>
+                        <li>Adrian</li>
+                        <li>Eduardo</li>
+                        <li>Emily</li>
+                        <li>larissa</li>
+                    </ul>
+                </ul> </li> </b>
+                
+                <ol>
+                    <li>  Sustituirá la numeración numérica por defecto (empezando por el 1)
+                        por letras minúsculas (empezando por la a):
+                    <ol>
+                        <li>Luis</li>
+                        <li>Adrian</li>
+                        <li>duardo</li>
+                        <li>Emily</li>
+                        <li>larissa</li>
+                     </ol>
+                    </li>
+                </ol>
+
+           <H3>2.6.10.3. El selector child</H3> 
+                <ol>
+                    <li>Luis</li>
+                    <li>Adrian</li>
+                    <li>duardo</li>
+                    <li>Emily</li>
+                    <li>larissa</li>
+                </ol>
+                <p><i><b>Hola</b> allí</i></p>
+
+           <H3>2.6.10.4. El selector ID</H3> 
+                <div id='miid'>Hola</div> <span id='miid'>Hola</span>
+
+           <H3> 2.6.10.5. El selector class</H3> 
+           <span class='miclase'>HOLA</span>
+
+            <H3>2.6.10.6. El selector attribute</H3>
+            <CODE>[type="submit"] { width:100px; }</CODE>
+
+
+            <H3> 2.6.10.7. El selector universal</H3>
+                Un documento dando un borde verde a todos sus elementos:<BR>
+                    <CODE>* { border:1px solid rgba(109, 0, 128, 0.09); }</CODE><BR>
+                         El ID boxout, y sólo mientras no sean hijos directos:<BR>
+                    <CODE>#boxout * p {border:1px solid rgba(186, 131, 164, 0.312); }</CODE><BR>
+                    
+            <H3>2.6.10.8. Seleccionar por grupo </H3>
+            p, #idname, .classname { border-bottom:1px dotted orange; }
+
+
+            <h1>Formulario de Ejemplo</h1>
+<form method="post" action="registrar.php" input[type="submit"] { width:100px; }>
+   <fieldset allign="center" >
+         Nombre: <input type="text" name="nombre" style="background:#E5D8DD;"><br>
+         ApellidoP: <input type="text" name="apellidoPa" style="background:#E5D8DD;"><br>
+         ApellidoM: <input type="text" name="apellidoM" style="background:#E5D8DD;"><br>
+         Fecha nacimiento:<input type="date" name="Fecha nacimiento" style="background:#E5D8DD;"><br>
+         Direccion: <input type="text" name="direccion" style="background:#E5D8DD;"><br>
+         Correo:<input type="email" name="correo" style="background:#E5D8DD;"><br> 
+         <input type="range" name="points" min="o" max="0"><br>
+
+
+         Sexo: <br> 
+         <input type="radio" name="genero" value="Masculino">Masculino<br>
+         <input type="radio" name="genero" value="Femenino">Femenino<br>
+
+            Idiomas que maneja:<br>
+            <input type="checkbox" name="idioma1" value="ingles">Ingles<br>
+            <input type="checkbox" name="idioma1" value="frances">Frances<br>
+            <input type="checkbox" name="idioma1" value="castellano">castellano<br>
+
+            Ingrese su pais:
+            <select name="Pais" class="yellow">
+                <option></option>
+                <option value="Mexico">Mexico</option>
+                <option value="EUA">EUA</option>
+                <option value="argentina">Argentina</option>
+                <option value="venezuela">Venezuela</option>
+            </select><br>
+
+            Especialidad:
+            <select name="especialidad" class="yellow">
+                <option></option>
+                <option value="Recursos humanos">Recursos humanos</option>
+                <option value="Contabilidad">Contabilidad</option>
+                <option value="Programacion">Programacion</option>
+                <option value="Logistica">Logistica</option>
+            </select><br>
+            
+            Ingrese su descripcion personal:<br>
+            <textarea rows="6" cols="50">
+                Ingrese su descripcion personal aqui.
+            </textarea><br>
+
+        <input class="pink" type="submit" value="Guardar">
+        <input class="pink" type="reset" name="Eliminar">
+</fieldset>
+</form>
+        </BODY>
+</HTML> 

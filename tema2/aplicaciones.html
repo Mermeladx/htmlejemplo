@@ -1,0 +1,171 @@
+<!doctype html>
+<HTML lang=”es”>  
+    <style> /* Consultas de medios */ 
+        .left, .right {
+                        float: left;
+                         width: 30%; /* El ancho es 30%, por omisión */
+        }
+        
+        .main {
+                 float: left;
+                 width: 50%; /* El ancho es 50%, por omisión */
+        }
+        /* Se usa una consulta de medios para añadir un punto de ruptura a 800px: */
+        @media screen and (max-width: 800px) {
+                                        .left, .main, .right {
+                                         width: 100%; /* el ancho es del 100%, cuando el viewport es 800px o más pequeño */
+                                        }
+        }
+        </style>
+    <HEAD>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <H2>Actividad 2.3.4. Aplicaciones.</H2>
+        <meta name="keywords" 
+        content="HTML5, CSS3, Javascript, palabra clave">
+        <TITLE>Aplicaciones</TITLE>
+    </HEAD>
+        <BODY>
+            <H3>2.3.7.1. Diseño web responsivo</H3>
+                <H4>Sitio web responsivo:</H4>
+                <CODE> SE UTILIZA < meta name="viewport" content="width=device-width, initial-scale=1.0" > </CODE> <br>
+                
+               <H4>Imágenes responsivas</H4>
+                <CODE> SE UTILIZA < img src="imagen_ciudad.jpg" style="width:100%;" > </CODE><br>
+                          <img src="imagen_ciudad.jpg" style="width:100%;">
+                    
+
+               <H4>Imágenen la imagen se reducirá</H4>
+                <CODE> SE UTILIZA < img src="imagen_ciudad.jpg" style="max-width:100%;height:auto;" > </CODE><br>
+                         <img src="imagen_ciudad.jpg" style="max-width:100%;height:auto;">
+
+                <H4>< picture > </H4>
+                 <picture>
+                     <source srcset="imagen_ciudad.jpg" media="(max-width: 600px)">
+                     <source srcset="imagen_ciudad.jpg" media="(max-width: 1500px)">
+                     <source srcset="imagen_ciudad.jpg">
+                     <img src="imagen_ciudad.jpg" alt="mi imagen">
+                 </picture>
+                
+                 <H4>Texto responsivo</H4>
+                 <CODE> SE UTILIZA < h1 style="font-size:10vw">Hola mundo!!!< /h1 > </CODE>
+                         <h1 style="font-size:10vw">Hola mundo!!!</h1>
+
+            <H3>2.3.7.3. Geolocalización</H3>
+             <H4>Localizar la posición de un usuario</H4>
+             <script>
+                 var x = document.getElementById("localizacion");
+                 function getLocation() {
+                     if (navigator.geolocation) {
+                     navigator.geolocation.getCurrentPosition(muestraPosicion, muestraError);
+                     } else {
+                             x.innerHTML = "La Geolocalización no está soportada por este navegador.";
+                             }
+                     }
+                
+                     function muestraPosicion(posicion) {
+                     x.innerHTML = "Latitud: " + posicion.coords.latitude + 
+                     "<br>Longitud: " + posicion.coords.longitude; 
+                     }
+
+                     function muestraMapa(posicion) {
+                     var latlon = posicion.coords.latitude + "," + posicion.coords.longitude;
+                     var img_url = "https://maps.googleapis.com/maps/api/staticmap?center"=
+                     "+latlon&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
+                     document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+                     }
+                
+                     function muestraError(error) {
+                     switch(error.code) {
+                         case error.PERMISSION_DENIED:
+                         x.innerHTML = "El Usuario negó la petición para la geolocalización."
+                     break;
+                         case error.POSITION_UNAVAILABLE:
+                         x.innerHTML = "No está disponible la información para localización."
+                     break;
+                         case error.TIMEOUT:
+                         x.innerHTML = " La solicitud para obtener la ubicación del usuario se ha agotado."
+                     break;
+                         case error.UNKNOWN_ERROR:
+                         x.innerHTML = " Se ha producido un error desconocido."
+                     break;
+                     }
+                 }
+             </script>
+
+            <H3>2.3.7.4. Almacenamiento Web</H3>
+             <script>
+                 // Verificar el soporte de almacenamiento Web
+                 if (typeof(Storage) !== "undefined") {
+                 // Store
+                 localStorage.setItem("Apellido", "Perez");
+                 // Retrieve
+                 document.getElementById("resultado").innerHTML = localStorage.getItem("Apellido");}
+                 else {
+                 document.getElementById("resultado").innerHTML = "Lo siento tu navegador no soporta almacenamiento Web...";
+                 }
+             </script>
+            
+                 <script>
+                 function contador() {
+                     if (typeof(Storage) !== "undefined") {
+                         if (sessionStorage.contador) {
+                         sessionStorage.contador = Number(sessionStorage.clickcount)+1;
+                         } else {
+                             sessionStorage.contador = 1;
+                         }
+                    
+                         document.getElementById("resultado").innerHTML = "Haz presionado el botón " + 
+                         sessionStorage.contador + " veces en esta sesión.";
+                         } else {
+                            document.getElementById("resultado").innerHTML = " Lo siento tu navegador no soporta almacenamiento Web...";
+                         }
+                }
+                </script>
+                     <p><button onclick="contador()" type="button">Haz clic aquí!!</button></p>
+                     <div id="resultado"></div>
+                     <p>Haz clic para incrementar el contador.</p>
+                     <p>Cierra la pestaña (o ventana) del navegador, e inténtalo de nuevo, y el contador se 
+                     reiniciará.</p>
+
+
+            <H3>2.3.7.5. Trabajadores Web</H3>
+            <p>Número de contadores: <output id="resultado"></output></p>
+             <button onclick="comienzaTrabajador()"> Empezar trabajador</button>
+             <button onclick="detenTrabajador()">Detener trabajador</button>
+             <script>
+                var w;
+                function comienzaTrabajador() {
+                    if (typeof(Worker) !== "undefined") {
+                        if (typeof(w) == "undefined") {
+                            w = new Worker("trabajador_demo.js");
+                        }w.onmessage = function(event) {
+                            document.getElementById("resultado").innerHTML = event.data;
+                        };
+                        } else {
+                            document.getElementById("resultado").innerHTML = "Lo siento: No hay soporte para trabajadores web.";
+                        }
+                    }
+                function detenTrabajador() { 
+                    w.terminate();
+                    w = undefined;
+                }
+             </script>
+
+            <H3>2.3.7.6. API HTML para eventos enviados al servidor</H3>
+             <H4>Notificaciones de eventos enviados por el servidor</H4>
+             <script>
+                 if(typeof(EventSource) !== "undefined") {
+                 // Hay soporte para eventos enviados por el servidor!!
+                 var source = new EventSource("demo_sse.php");
+                 source.onmessage = function(event) {
+                 document.getElementById("resultado").innerHTML += event.data + "<br>";
+                };
+                } else {
+                // Lo sentimos. No hay soporte para eventos enviados por el servidor!!.
+                }
+            </script>      
+        </BODY>
+</HTML> 

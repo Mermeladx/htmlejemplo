@@ -1,0 +1,106 @@
+<!doctype html>
+<HTML lang=”es”>
+    <HEAD>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <H2> Actividad. 2.4.3. Atributos de input </H2>
+        <meta name="keywords" 
+        content="HTML5, CSS3, Javascript, palabra clave">
+        <TITLE>AtributosInput245</TITLE>
+    </HEAD>
+        <BODY>
+            <h2>2.4.5. Atributos de input</h2>
+                <H3> 2.4.5.1. El atributo value<BR> </H3>
+                    <form action="/accion.php">
+                        <label for="nombre"> Nombre:</label><br>
+                        <input type="text" id="nombre" name="nombre" value="Juan"><br>
+                        <label for="apellidoPaterno"> Apellido Paterno:</label><br>
+                        <input type="text" id=" apellidoPaterno " name=" apellidoPaterno" value="Pérez"><BR>
+                        <label for="apellidoMaterno"> Apellido Materno:</label><br>
+                        <input type="text" id=" apellidoMaterno " name=" apellidoMaterno " value="García"><BR>
+                        <input type="submit">
+                        <input type="reset" value="Restaurar"><BR>
+                           
+                <H3>2.4.5.2. El atributo readonly<BR> </H3>
+                    <h4>Solo de lectura:</h4>
+                        <label for="nombre"> Nombre:</label><br>
+                        <input type="text" id="nombre" name="nombre" value="Juan" readonly><br>
+                        
+                <H3> 2.4.5.3. El atributo disabled<BR> </H3>
+                    <h4>Un campo de entrada deshabilitado:</h4>
+                        <label for="nombre"> Nombre:</label><br>
+                        <input type="text" id="nombre" name="nombre" value="Juan" disabled ><br>
+                
+                <H3> 2.4.5.4. El atributo size<BR> </H3>
+                    <H4>Ancho para un campo de entrada:</H4>
+                        <label for="pin">PIN:</label><br>
+                        <input type="text" id="pin" name="pin" size="2">
+                
+                <H3> 2.4.5.5. El atributo maxlength<BR> </H3>
+                    <label for="pin">PIN:</label><br>
+                    <input type="text" id="pin" name="pin" maxlength="6" size="6">
+                    
+                <H3>2.4.5.6. Los atributos min y max<BR> </H3>
+                    <label for="fechamax"> Ingrese una fecha anterior a 1980-01-01:</label>
+                    <input type="date" id="fechamax " name="fechamax" max="1979-12-31"><br><br>
+                    <label for="fechamin"> Ingrese una fecha posterior al 2000-01-01:</label>
+                    <input type="date" id="fechamin" name="fechamin" min="2000-01-02"><br><br>
+                    <label for="cantidad"> Cantidad (entre 1 y 5):</label>
+                    <input type="number" id="cantidad" name="cantidad" min="1" max="5"><BR>
+                                        
+                <H3> 2.4.5.7. El atributo multiple<BR> </H3>
+                    <label for="archivos">Seleccione los archivos:</label>
+                    <input type="file" id="archivos" name="archivos" multiple><BR>
+
+                <H3> 2.4.5.8. El atributo pattern<BR> </H3>
+                    <label for="codigoPais"> Código de país:</label>
+                    <input type="text" id="codigoPais" name="codigoPais" 
+                    pattern="[A-Za-z]{3}" title="Se require un código de tres letras"><BR>
+
+                <H3> 2.4.5.9. El atributo placeholder<BR> </H3>
+                    <label for="telefono"> Ingresa un número de teléfono:</label> 
+                    <input type="tel" id="telefono" name="telefono"
+                    placeholder="241-147-3249"
+                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}">
+                        
+                <H3> 2.4.5.10. El atributo required<BR> </H3>
+                    <H4>Un campo de entrada obligatorio</H4>
+                        <label for="nombreUsuario">Nombre de usuario:</label>
+                        <input type="text" id="nombreUsr" name="nombreUsr" required>
+
+                <H3> 2.4.5.11. El atributo step<BR> </H3>
+                    <H4>Intervalo de números legal especificado:</H4>
+                        <label for="pasos">Pasos:</label>
+                        <input type="number" id="pasos" name="pasos" step="3">
+                            
+                <H3> 2.4.5.12. El atributo autofocus<BR> </H3>
+                    <H4>Obtenga automáticamente el foco cuando se cargue la página</H4>
+                        <label for="nombre"> Nombre:</label><br>
+                        <input type="text" id="nombre" name="nombre" value="Juan" autofocus ><br>
+                    
+                <H3>2.4.5.13. Los atributos de height y width<BR> </H3>
+                    <input type="image" src="jujutsu2.gif" alt="Enviar" width="120" height="60">
+
+                <H3>2.4.5.14. El atributo list<BR> </H3>
+                    <H4>Lista desplegable:</H4>
+                    <input list="navegadores" >
+                        <datalist id="navegadores">
+                            <option value="Internet Explorer">
+                            <option value="Firefox">
+                            <option value="Chrome">
+                            <option value="Opera">
+                            <option value="Safari">
+                        </datalist>
+
+                <H3> 2.4.5.15. El atributo autocomplete<BR> </H3>
+                    <H4>Un campo de entrada situado fuera del formulario HTML (pero que sigue siendo parte del
+                        formulario):</H4>
+                       <form action="/accion.php" autocomplete="on">
+                            <label for="correo">Correo:</label>
+                            <input type="email" id="correo" name="correo" autocomplete="off"><br><br>
+                        </form>                                                   
+                </form>                                 
+        </BODY>
+</HTML> 

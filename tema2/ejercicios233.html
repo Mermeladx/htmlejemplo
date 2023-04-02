@@ -1,0 +1,143 @@
+<!doctype html>
+<HTML lang=”es”>
+    <style>
+        table {
+             font-family: arial, sans-serif;
+             border-collapse: collapse;
+             width: 100%;
+            }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .contenedor-rejilla {
+            display: grid;
+            grid-row-gap: 50px;
+            grid-column-gap: 50px;
+            grid-gap: 50px 70px;
+            grid-template-columns: auto auto auto;
+            background-color: #21f38a;
+            padding: 10px;
+        }
+
+        .dato-rejilla {
+            background-color: rgba(255, 255, 255, 0.722);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        </style>
+    <HEAD>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <H2> Actividad 2.3.3. Ejercicios HTML.</H2>
+        <meta name="keywords" 
+        content="HTML5, CSS3, Javascript, palabra clave">
+        <TITLE>Ejercicios233</TITLE>
+    </HEAD>
+        <BODY>
+            <H3> 2.3.4. Tablas <BR></H3>       
+                   
+                <H4>2.3.4.1. Tablas simples:</H4>
+                    <table style="width:100%">
+                    <caption style="caption-side:bottom">Mi tabla</caption>
+                        <tr>
+                             <th>Persona 1</th>
+                             <th>Persona 2</th>
+                             <th>Persona 3</th>
+                             <th>Persona 4</th>
+                             <th>Persona 5</th>
+                         </tr>
+                        <tr>
+                            <td>Luis</td>
+                            <td>Adrian</td>
+                            <td>Eduardo</td>
+                            <td>Emily</td>
+                            <td>Larissa</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>21</td>
+                            <td>21</td>
+                            <td>20</td>
+                        </tr>
+                    </table>
+
+
+                <H4>2.3.4.2. Tablas con encabezado y pie</H4>
+                   <p> <table>
+                        <thead>
+                          <tr>
+                             <th>Deporte</th>
+                             <th>Equipo</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                             <tr>
+                                 <td>Basquet</td>
+                                 <td>10</td>
+                             </tr>
+                             <tr>
+                                 <td>Fútbol</td>
+                                 <td>20</td>
+                             </tr>
+                        </tbody>
+                         <tfoot>
+                             <tr>
+                                 <td>Total</td>
+                                 <td>30</td>
+                             </tr> 
+                        </tfoot>
+                    </table> </p>
+
+                <H3>2.3.4.3. Rejillas</H3>    
+                    <h4>Mostrando una rejilla (grid y inline-grid)</h4>
+                         <div class="contenedor-rejilla">
+                         <div class="dato-rejilla">1</div>
+                         <div class="dato-rejilla">2</div>
+                         <div class="dato-rejilla">3</div>
+                         <div class="dato-rejilla">4</div>
+                         <div class="dato-rejilla">5</div>
+                         <div class="dato-rejilla">6</div>
+                         <div class="dato-rejilla">7</div>
+                         <div class="dato-rejilla">8</div>
+                         <div class="dato-rejilla">9</div>
+                         </div>
+            
+            <H3> 2.3.5. Objetos<BR> </H3>
+                <H4>Incrustar objetos embebido:</H4>
+                <object data="C:/Users/laris/OneDrive/Documents/curso HTML y CSS/html/imagenes/feliz.jpg" width="250" height="220"></object>
+                
+            <H3>2.3.6. Imágenes<BR> </H3>
+                <H4> (URL):</H4>
+                    <img src="imagen_ciudad.jpg" alt="Imagen de una ciudad" style="height:300px";
+                    height:600px;>
+
+                <H4> URL absoluta (completa) :</H4>
+                    <img src="https://img1.ak.crunchyroll.com/i/spire2/945aa523c5e30d33653fca83dbd6e27e1600049449_main.png" style="width:500px"
+                    alt="Logo Jujutsu">
+                    
+                <H4> URL absoluta (completa) :</H4>
+                    <img src="jujutsu.gif" alt="Un programador" style="width:120px;height:60px;">
+                    
+                <H4> (float) Imagen flote a la derecha o a la izquierda de un
+                    texto:</H4>
+                    <p><img src="jujutsu2.gif" alt="Animación de izquierda a derecha"
+                        style="float:right;width:120px;height:60px;"><BR><BR>
+
+                <H4> Una imagen como liga:</H4> 
+                    <a href="default.asp">
+                        <img src="jujutsu3.gif" alt="Aprende más" style="width:120px;height:60px;">
+                    </a>
+        </BODY>
+</HTML> 
